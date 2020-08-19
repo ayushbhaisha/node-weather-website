@@ -9,7 +9,7 @@ const forecast = (address,callback) => {
         }else if(body.error){
             callback('Missing location...',undefined)
         }else{
-            callback(undefined,body.current.weather_descriptions+'. It is currently '+body.current.temperature+' outside. It is '+ body.current.precip+'% chance of rain.')
+            callback(undefined,body.current.weather_descriptions+'. It is currently '+body.current.temperature+' degree outside. It is '+ body.current.precip+'% chance of rain. And it feels like ' +body.current.feelslike + ' Outside.' )
         }
     })
 
